@@ -27,6 +27,16 @@ def get_student(view):
     return student
 
 
+# class SelectStudent(TemplateView):
+#     template_name = 'login.html'
+#
+#     def get_context_data(self, **kwargs):
+#         students = Student.objects.all()
+#
+#         return {'students': students}
+#         # return login_required({'semesters': semesters})
+
+
 class SelectSemester(TemplateView):
     template_name = 'select-term.html'
 

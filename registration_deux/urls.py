@@ -17,11 +17,18 @@ Including another URLconf
 from django.conf.urls import url
 # from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
 from student_registration import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^login/$', auth_views.login, name='login'),
+
+    # url(r'^login/$', views.SelectStudent.as_view()),
+    # url(r'^login/(?P<sudent>\d+)/$', views.LoginStudent.as_view()),
+    # url(r'^login/$', views.SelectStudent.as_view()),
 
     url(r'^register/$', views.SelectSemester.as_view()),
     url(r'^register/(?P<semester>\d+)/$', views.RegisterForClass.as_view()),

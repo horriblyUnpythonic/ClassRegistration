@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    <label for> select student
+        <select id="student-selection">
+            {% for student in students %}
+                <option>student</option>
+            {% endfor %}
+        </select>
+    </label>
+    <option>
+
+    </option>
+{#    <input type="submit" value="Go" onclick="return selectStudent()">#}
+    <button type="submit"> Select </button>
+</form>
+</body>
+</html>
+</form>
+
+{#<script>#}
+{#    function selectStudent() {#}
+{#        var selection = document.getElementById("student-selection").value;#}
+{#        window.location = "/login/" + selection;#}
+{#        return false;#}
+{#    }#}
+{#</script>#}
