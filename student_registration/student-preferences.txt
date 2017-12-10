@@ -1,0 +1,678 @@
+[
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "fun class", 
+      "boring prereq", 
+      "super sweet"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 30, 
+    "student-id": 0
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 16, 
+    "student-id": 1
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "boring prereq", 
+      "fun class"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 3, 
+    "student-id": 2
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 23, 
+    "student-id": 3
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "hard class", 
+      "everyone needs"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 28, 
+    "student-id": 5
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 0, 
+    "student-id": 6
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 20, 
+    "student-id": 8
+  }, 
+  {
+    "ordered-preference": [
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 7, 
+    "student-id": 9
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "boring prereq", 
+      "fun class", 
+      "hard class"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 20, 
+    "student-id": 10
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 17, 
+    "student-id": 11
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "boring prereq", 
+      "hard class", 
+      "everyone needs"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 9, 
+    "student-id": 12
+  }, 
+  {
+    "ordered-preference": [
+      "hard class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 10, 
+    "student-id": 13
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "boring prereq", 
+      "boring ancillary"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 38, 
+    "student-id": 14
+  }, 
+  {
+    "ordered-preference": [
+      "hard class", 
+      "super sweet", 
+      "everyone needs", 
+      "fun class"
+    ], 
+    "max-classes": 3, 
+    "student-credits": 9, 
+    "student-id": 15
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 18, 
+    "student-id": 16
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "hard class", 
+      "boring prereq", 
+      "everyone needs"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 13, 
+    "student-id": 19
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 34, 
+    "student-id": 22
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "boring prereq", 
+      "hard class"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 28, 
+    "student-id": 23
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 13, 
+    "student-id": 24
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 15, 
+    "student-id": 26
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 40, 
+    "student-id": 27
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 13, 
+    "student-id": 28
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "fun class", 
+      "everyone needs", 
+      "boring prereq"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 27, 
+    "student-id": 29
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "fun class", 
+      "everyone needs", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 13, 
+    "student-id": 31
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "hard class"
+    ], 
+    "max-classes": 3, 
+    "student-credits": 5, 
+    "student-id": 32
+  }, 
+  {
+    "ordered-preference": [
+      "boring ancillary", 
+      "hard class", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 5, 
+    "student-id": 33
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 35, 
+    "student-id": 34
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "super sweet", 
+      "hard class", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 35, 
+    "student-id": 35
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "hard class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 3, 
+    "student-id": 36
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 40, 
+    "student-id": 38
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "boring prereq", 
+      "hard class", 
+      "super sweet"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 12, 
+    "student-id": 39
+  }, 
+  {
+    "ordered-preference": [
+      "boring prereq", 
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 33, 
+    "student-id": 40
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 27, 
+    "student-id": 41
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 5, 
+    "student-id": 43
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 14, 
+    "student-id": 44
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 4, 
+    "student-id": 45
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 3, 
+    "student-credits": 38, 
+    "student-id": 47
+  }, 
+  {
+    "ordered-preference": [
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 4, 
+    "student-id": 48
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "hard class", 
+      "boring ancillary", 
+      "everyone needs"
+    ], 
+    "max-classes": 3, 
+    "student-credits": 9, 
+    "student-id": 52
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "hard class", 
+      "super sweet", 
+      "boring ancillary"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 36, 
+    "student-id": 53
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 14, 
+    "student-id": 54
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "boring prereq", 
+      "fun class", 
+      "super sweet"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 13, 
+    "student-id": 55
+  }, 
+  {
+    "ordered-preference": [
+      "boring prereq", 
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 23, 
+    "student-id": 56
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 22, 
+    "student-id": 57
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 16, 
+    "student-id": 59
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "fun class", 
+      "boring prereq", 
+      "hard class"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 16, 
+    "student-id": 60
+  }, 
+  {
+    "ordered-preference": [
+      "boring prereq", 
+      "super sweet", 
+      "everyone needs", 
+      "fun class"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 22, 
+    "student-id": 62
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "fun class", 
+      "everyone needs"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 9, 
+    "student-id": 66
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 3, 
+    "student-id": 67
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 38, 
+    "student-id": 69
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "everyone needs", 
+      "super sweet"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 5, 
+    "student-id": 70
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 14, 
+    "student-id": 71
+  }, 
+  {
+    "ordered-preference": [
+      "hard class", 
+      "super sweet", 
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 23, 
+    "student-id": 73
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 3, 
+    "student-id": 75
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 31, 
+    "student-id": 77
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "everyone needs"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 37, 
+    "student-id": 78
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 39, 
+    "student-id": 79
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 2, 
+    "student-id": 80
+  }, 
+  {
+    "ordered-preference": [
+      "hard class", 
+      "super sweet"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 15, 
+    "student-id": 81
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 31, 
+    "student-id": 83
+  }, 
+  {
+    "ordered-preference": [
+      "fun class", 
+      "hard class", 
+      "boring prereq"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 16, 
+    "student-id": 84
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 23, 
+    "student-id": 88
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "super sweet"
+    ], 
+    "max-classes": 2, 
+    "student-credits": 11, 
+    "student-id": 89
+  }, 
+  {
+    "ordered-preference": [
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 20, 
+    "student-id": 91
+  }, 
+  {
+    "ordered-preference": [
+      "boring prereq", 
+      "hard class", 
+      "boring ancillary"
+    ], 
+    "max-classes": 3, 
+    "student-credits": 30, 
+    "student-id": 92
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "fun class", 
+      "boring ancillary", 
+      "boring prereq"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 39, 
+    "student-id": 93
+  }, 
+  {
+    "ordered-preference": [
+      "everyone needs", 
+      "hard class", 
+      "fun class", 
+      "boring prereq"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 28, 
+    "student-id": 94
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "hard class", 
+      "boring ancillary"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 23, 
+    "student-id": 96
+  }, 
+  {
+    "ordered-preference": [
+      "super sweet", 
+      "boring prereq", 
+      "everyone needs", 
+      "fun class"
+    ], 
+    "max-classes": 1, 
+    "student-credits": 11, 
+    "student-id": 98
+  }, 
+  {
+    "ordered-preference": [
+      "boring prereq", 
+      "fun class", 
+      "super sweet", 
+      "hard class"
+    ], 
+    "max-classes": 4, 
+    "student-credits": 5, 
+    "student-id": 99
+  }
+]
