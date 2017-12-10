@@ -20,16 +20,16 @@
         {% for pref in course_preference %}
             <li class="course-container">
                 <input class='course-selected' id='{{ pref }}-checkbox' type="checkbox" checked>
-                <label for="{{ pref.id }}">{{ pref }}</label>
-                <input class="preference-order" hidden id="{{ pref.id }}" name="{{ pref.id }}" value="">
+                <label for="course_id-{{ pref.id }}">{{ pref }}</label>
+                <input class="preference-order" hidden id="course_id-{{ pref.id }}" name="course_id-{{ pref.id }}" value="">
             </li>
         {% endfor %}
         {% for offering in course_offering %}
             {% if offering not in course_preference %}
                 <li class="course-container">
                     <input class='course-selected' id='{{ offering }}-checkbox' type="checkbox">
-                    <label for="{{ offering.id }}">{{ offering }}</label>
-                    <input class="preference-order" hidden id="{{ offering.id }}" name="{{ offering.id }}" value="">
+                    <label for="course_id-{{ offering.id }}">{{ offering }}</label>
+                    <input class="preference-order" hidden id="course_id-{{ offering.id }}" name="course_id-{{ offering.id }}" value="">
                 </li>
             {% endif %}
         {% endfor %}

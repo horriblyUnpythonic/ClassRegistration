@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
+import re
 from logging import getLogger
 
 # Create your views here.
@@ -61,10 +63,20 @@ class RegisterForClass(TemplateView):
                 'course_preference': course_preference.course_offering.all()
 }
 
-    def post(self, request, **kwargs):
+    def post(self, request,  **kwargs):
         student = get_student(self)
+        courses = []
         for data in request.POST.keys():
-            print data, request.POST[data]
+            m = re.match('course_id-(\d+)', data)
+            order_value = request.POST[data]
+            if m:
+                if order_value:
+                    co = CourseOffering.objects.get(id=m.groups()[0])
+                    courses.append((int(order_value), co))
+        sorted_pref = [i[1] for i in sorted(courses)]
+        semester = Semester.objects.get(id=kwargs['semester'])
+        course_preference = CoursePreference.objects.get(student=student, semester=semester)
+        course_preference.course_offering = sorted_pref
         # return redirect('/register/1')
         # return super(TemplateView, self).render_to_response(self.get_context_data())
         # c = self.get_context_data(**kwargs)
