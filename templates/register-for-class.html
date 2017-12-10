@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+    {% load staticfiles %}
+</head>
+<body>
+
+<h1>
+    REGISTRATION
+</h1>
+
+<ul class="sortable">
+    {% for offering in course_offering %}
+        <li>
+            {{ offering }}
+        </li>
+    {% endfor %}
+</ul>
+
+
+{#<form action='/dumb/' method="post">#}
+<form method="post">
+    {% csrf_token %}
+    <label>Your name:
+        <input id="stuff" type="text" name="sutfff" value="{{ current_name }}">
+    </label>
+    <ul class="sortable">
+        {% for pref in course_preference %}
+            <li>
+                <label for="{{ pref.id }}">{{ pref }}</label>
+                <input class="preference-order" hidden id="{{ pref.id }}" name="{{ pref }}" value="">
+            </li>
+        {% endfor %}
+    </ul>
+
+    <input type="submit" value="dumb form" onclick="return beforeSubmit()" />
+</form>
+
+{#<button onclick="submit()">#}
+{#    {% csrf_token %}#}
+{#    submit button onclick#}
+{#</button>#}
+
+{#<script>#}
+{#    function submit() {#}
+{#        alert('hello submit');#}
+{#        $.post('/register/', 'POST', {});#}
+{#        return false;#}
+{#    }#}
+{#</script>#}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="{% static "/html5sortable/jquery.sortable.js" %}"></script>
+{#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
+<script>
+    $('.sortable').sortable();
+
+    function beforeSubmit() {
+        console.log('before submit');
+        const preferences = document.getElementsByClassName("preference-order");
+        for(let i = 0; i < preferences.length; i++ ) {
+            preferences[i].value = i;
+            console.log(preferences[i]);
+        }
+        return true
+    }
+
+</script>
+
+</body>
+</html>
