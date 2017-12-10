@@ -17,6 +17,9 @@ from student_registration.utils import assign_students
 logger = getLogger()
 
 
+class Home(TemplateView):
+    template_name = 'home.html'
+
 def get_student(view):
     user = view.request.user
     try:
@@ -30,9 +33,13 @@ def get_student(view):
 class SelectSemester(TemplateView):
     template_name = 'select-term.html'
 
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.is_authenticated:
+            return redirect('/login/')
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context)
+
     def get_context_data(self, **kwargs):
-        # if not self.request.user.is_authenticated:
-        #     return redirect('/login/')
         student = get_student(self)
 
         semesters = models.Semester.objects.all()

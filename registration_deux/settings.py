@@ -74,6 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'registration_deux.wsgi.application'
 
+LOGIN_URL = '/login/'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases

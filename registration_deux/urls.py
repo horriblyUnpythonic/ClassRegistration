@@ -31,6 +31,8 @@ urlpatterns = [
     url(r'^register/(?P<semester>\d+)/$', views.RegisterForClass.as_view()),
     url(r'^dumb/$', views.RegAll.as_view()),
     # url(r'^dumb/$', views.Dumb.as_view()),
+
+    url(r'', views.Home.as_view()),
 ]
 # ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
