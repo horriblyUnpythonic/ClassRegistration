@@ -18,18 +18,18 @@
     {% csrf_token %}
     <ul class="sortable">
         {% for pref in course_preference %}
-            <li>
-                <input value='{{ pref }}-checkbox' type="checkbox" checked>
+            <li class="course-container">
+                <input class='course-selected' id='{{ pref }}-checkbox' type="checkbox" checked>
                 <label for="{{ pref.id }}">{{ pref }}</label>
-                <input class="preference-order" hidden id="{{ pref.id }}" name="{{ pref }}" value="">
+                <input class="preference-order" hidden id="{{ pref.id }}" name="{{ pref.id }}" value="">
             </li>
         {% endfor %}
         {% for offering in course_offering %}
             {% if offering not in course_preference %}
-                <li>
-                    <input value='{{ offering }}-checkbox' type="checkbox">
+                <li class="course-container">
+                    <input class='course-selected' id='{{ offering }}-checkbox' type="checkbox">
                     <label for="{{ offering.id }}">{{ offering }}</label>
-                    <input class="preference-order" hidden id="{{ offering.id }}" name="{{ offering }}" value="">
+                    <input class="preference-order" hidden id="{{ offering.id }}" name="{{ offering.id }}" value="">
                 </li>
             {% endif %}
         {% endfor %}
@@ -59,10 +59,15 @@
 
     function beforeSubmit() {
         console.log('before submit');
-        const preferences = document.getElementsByClassName("preference-order");
+        const preferences = document.getElementsByClassName("course-container");
+        let pref_number = 0;
         for(let i = 0; i < preferences.length; i++ ) {
-            preferences[i].value = i;
-            console.log(preferences[i]);
+            if (preferences[i].getElementsByClassName('course-selected')[0].checked) {
+                preferences[i].getElementsByClassName('preference-order')[0].value = pref_number;
+                {# preferences[i].value = pref_number;#}
+                ++pref_number;
+                console.log(preferences[i]);
+            }
         }
         return true
     }
