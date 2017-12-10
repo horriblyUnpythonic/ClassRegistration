@@ -1,7 +1,8 @@
+from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand, CommandError
 
 from student_registration.createstudentpref import get_preferences
-from student_registration.models import CoursePreference
+from student_registration.models import CoursePreference, Semester, Student, Course, CourseOffering
 from student_registration.utils import assign_students
 
 
@@ -16,3 +17,40 @@ class Command(BaseCommand):
 
         student_assignments = assign_students(sp)
         print student_assignments
+
+
+
+        sp = get_preferences('student_registration/student-preferences.txt')
+        semester = Semester.objects.last()
+        for student_p in sp:
+            id = student_p['student-id']
+            un = 'auto{}'.format(id)
+            user, m1 = User.objects.get_or_create(username=un)
+            user.set_password(un)
+            user.save()
+            student, m2 = Student.objects.get_or_create(user=user)
+            # Add old courses in for credit count
+            course_preferences = []
+            for c in student_p['ordered-preference']:
+                course, m3 = Course.objects.get_or_create(title=c, credits=3)
+                offering, m4 = CourseOffering.objects.get_or_create(course=course, semester=semester)
+                offering.save()
+                course_preferences.append(offering)
+            cp, m5 = CoursePreference.objects.get_or_create(student=student, semester=semester)
+            cp.course_offering = course_preferences
+            cp.save()
+
+
+
+        # student_assignments = assign_students(sp)
+        # for pref in sp:
+        #     student = Student.objects.get(user_id=pref['student-id'])
+        #     sp2.append({
+        #         'ordered-preference': student.coursepreference_set,
+        #         'max-classes': 3,
+        #         'student-credits': student.total_credits,
+        #         'student-id': student.id,
+        #     })
+        #     print student_assignments
+        #     student.coursepreference_set.get(semester=semester)
+

@@ -11,27 +11,27 @@
     REGISTRATION
 </h1>
 
-<ul class="sortable">
-    {% for offering in course_offering %}
-        <li>
-            {{ offering }}
-        </li>
-    {% endfor %}
-</ul>
-
+<h3>Course Offering Preferences</h3>
 
 {#<form action='/dumb/' method="post">#}
 <form method="post">
     {% csrf_token %}
-    <label>Your name:
-        <input id="stuff" type="text" name="sutfff" value="{{ current_name }}">
-    </label>
     <ul class="sortable">
         {% for pref in course_preference %}
             <li>
+                <input value='{{ pref }}-checkbox' type="checkbox" checked>
                 <label for="{{ pref.id }}">{{ pref }}</label>
                 <input class="preference-order" hidden id="{{ pref.id }}" name="{{ pref }}" value="">
             </li>
+        {% endfor %}
+        {% for offering in course_offering %}
+            {% if offering not in course_preference %}
+                <li>
+                    <input value='{{ offering }}-checkbox' type="checkbox">
+                    <label for="{{ offering.id }}">{{ offering }}</label>
+                    <input class="preference-order" hidden id="{{ offering.id }}" name="{{ offering }}" value="">
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
 
