@@ -13,7 +13,6 @@
 
 <h3>Course Offering Preferences</h3>
 
-{#<form action='/dumb/' method="post">#}
 <form method="post">
     {% csrf_token %}
     <ul class="sortable">
@@ -41,22 +40,10 @@
         </label>
     </div>
     <div>
-        <input type="submit" value="dumb form" onclick="return beforeSubmit()" />
+        <input type="submit" value="Submit Preference" onclick="return beforeSubmit()" />
     </div>
 </form>
 
-{#<button onclick="submit()">#}
-{#    {% csrf_token %}#}
-{#    submit button onclick#}
-{#</button>#}
-
-{#<script>#}
-{#    function submit() {#}
-{#        alert('hello submit');#}
-{#        $.post('/register/', 'POST', {});#}
-{#        return false;#}
-{#    }#}
-{#</script>#}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="{% static "/html5sortable/jquery.sortable.js" %}"></script>
