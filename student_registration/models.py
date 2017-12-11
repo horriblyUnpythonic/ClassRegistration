@@ -70,6 +70,7 @@ class StudentRecord(models.Model):
 class CoursePreference(models.Model):
     student = models.ForeignKey(Student)
     semester = models.ForeignKey(Semester)
+    max_classes = models.IntegerField(default=1)
 
     course_offering = SortedManyToManyField(CourseOffering)
 

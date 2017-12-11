@@ -59,7 +59,8 @@ class RegisterForClass(TemplateView):
         course_offering = CourseOffering.objects.filter(semester=semester)
         course_preference, created = CoursePreference.objects.get_or_create(student=student, semester=semester)
 
-        return {'course_offering': course_offering,
+        return {'max_classes': course_preference.max_classes,
+                'course_offering': course_offering,
                 'course_preference': course_preference.course_offering.all()
 }
 
@@ -76,7 +77,9 @@ class RegisterForClass(TemplateView):
         sorted_pref = [i[1] for i in sorted(courses)]
         semester = Semester.objects.get(id=kwargs['semester'])
         course_preference = CoursePreference.objects.get(student=student, semester=semester)
+        course_preference.max_classes = request.POST['max-classes']
         course_preference.course_offering = sorted_pref
+        course_preference.save()
         # return redirect('/register/1')
         # return super(TemplateView, self).render_to_response(self.get_context_data())
         # c = self.get_context_data(**kwargs)

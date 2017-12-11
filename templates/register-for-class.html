@@ -34,8 +34,15 @@
             {% endif %}
         {% endfor %}
     </ul>
-
-    <input type="submit" value="dumb form" onclick="return beforeSubmit()" />
+    <div>
+        <label for="max-classes">
+            Max Classes
+            <input type="number" id="max-classes" name='max-classes' value={{ max_classes }}>
+        </label>
+    </div>
+    <div>
+        <input type="submit" value="dumb form" onclick="return beforeSubmit()" />
+    </div>
 </form>
 
 {#<button onclick="submit()">#}
