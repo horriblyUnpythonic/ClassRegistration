@@ -13,7 +13,7 @@ from django.views.generic import TemplateView
 
 from student_registration import models
 from student_registration.createstudentpref import get_preferences
-from student_registration.models import Semester, CoursePreference, CourseOffering, Student, Course
+from student_registration.models import Semester, CoursePreference, CourseOffering, Student, Course, StudentRecord
 from student_registration.utils import assign_students
 
 logger = getLogger()
@@ -84,3 +84,14 @@ class RegisterForClass(TemplateView):
         # return super(TemplateView, self).render_to_response(self.get_context_data())
         # c = self.get_context_data(**kwargs)
         return self.get(request, **kwargs)
+
+
+class Audit(SelectSemester):
+    template_name = 'audit.html'
+
+    def get_context_data(self, **kwargs):
+        student = get_student(self)
+
+        records = StudentRecord.objects.filter(student=student)
+        return {'student_records': records}
+

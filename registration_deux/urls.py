@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^register/$', views.SelectSemester.as_view()),
     url(r'^register/(?P<semester>\d+)/$', views.RegisterForClass.as_view()),
 
+    url(r'^audit/$', views.Audit.as_view()),
+
     url(r'', views.Home.as_view()),
 ]
 # ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

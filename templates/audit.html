@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>Course</td>
+        <td>Semester</td>
+        <td>Grade</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for record in student_records %}
+        <tr>
+            <td> {{ record.course_offering.course }} </td>
+            <td> {{ record.course_offering.semester }} </td>
+            <td> {{ record.grade }} </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
