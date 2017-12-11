@@ -15,10 +15,8 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         sp = get_preferences('student_registration/student-preferences.txt')
 
-        student_assignments = assign_students(sp)
-        print student_assignments
-
-
+        # student_assignments = assign_students(sp)
+        # print student_assignments
 
         sp = get_preferences('student_registration/student-preferences.txt')
         semester = Semester.objects.last()
@@ -39,18 +37,3 @@ class Command(BaseCommand):
             cp, m5 = CoursePreference.objects.get_or_create(student=student, semester=semester)
             cp.course_offering = course_preferences
             cp.save()
-
-
-
-        # student_assignments = assign_students(sp)
-        # for pref in sp:
-        #     student = Student.objects.get(user_id=pref['student-id'])
-        #     sp2.append({
-        #         'ordered-preference': student.coursepreference_set,
-        #         'max-classes': 3,
-        #         'student-credits': student.total_credits,
-        #         'student-id': student.id,
-        #     })
-        #     print student_assignments
-        #     student.coursepreference_set.get(semester=semester)
-
